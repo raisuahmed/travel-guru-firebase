@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import Map from "../Map/Map";
+import GMap from "../Gmap/Gmap";
 
 const Destination = () => {
 	return (
@@ -15,7 +15,7 @@ const Destination = () => {
 					
 				</div>
 				<div className="col-lg-5">
-					<Map></Map>
+					<GMap></GMap>
 				</div>
 			</div>
 		</div>

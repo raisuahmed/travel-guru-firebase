@@ -1,6 +1,6 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import { MDBIcon } from 'mdbreact';
+// import { MDBIcon } from 'mdbreact';
 
 
 
@@ -19,7 +19,7 @@ const Gmap = (props) => {
             lng={30.337844}
             text="My Marker"
           /> */}
-          <MDBIcon className="fa-3x" style={{color:'red'}} icon="map-marker" position={marker} />
+          {/* <MDBIcon className="fa-3x" style={{color:'red'}} icon="map-marker" position={marker} /> */}
         </GoogleMapReact>
       </div>
     );
