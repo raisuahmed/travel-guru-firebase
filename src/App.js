@@ -4,11 +4,6 @@ import "./App.css";
 import Home from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import Login from "./components/Login/Login";
-// import Booking from "./components/Booking/Booking";
-// import NotFound from "./components/NotFound/NotFound";
-// import Destination from "./components/Destination/Destination";
-// import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext();
 
