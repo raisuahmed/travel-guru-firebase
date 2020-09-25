@@ -1,8 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import FakeData from "../../FakeData";
-import TravelCard from "../TravelCard/TravelCard";
-import "./Home.css";
+// import TravelCard from "../TravelCard/TravelCard";
+// import "./Home.css";
 
 const Home = () => {
 	const history = useHistory();
