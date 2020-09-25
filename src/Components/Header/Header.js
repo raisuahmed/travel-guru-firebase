@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Header.css";
-import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
+import { Button, FormControl, Nav, Navbar } from "react-bootstrap";
 import logo from "../../Icon/Logo.png";
 import { Link, useHistory } from "react-router-dom";
 import { UserContext } from "../../App";
@@ -10,13 +10,13 @@ const Header = () => {
 	const handleLoginRoute = () => {
 		history.push("/user");
 	};
-	const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+	const [loggedInUser] = useContext(UserContext);
 	// const [signOutUser, setSignOutUser] = useContext(UserContext);
 
 	return (
-		<Navbar bg="dark" expand="md">
+		<Navbar bg="navbar-dark bg-primary" expand="md">
 			<div className="container-lg">
-				<Link to="/" className="navbar-brand mr-md-5 mr-0">
+				<Link to="/" className="navbar-brand mr-md-3 mr-0">
 					<div className="logo">
 						<img src={logo} style={{ maxWidth: "120px", color:"white" }} alt="logo dark" />
 					</div>
@@ -26,21 +26,21 @@ const Header = () => {
 				</div>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="ml-auto align-items-md-center">
+					<Nav className="ml-auto align-items-md-center" >
 						<Link to="/" className="nav-link mr-lg-5 mr-0">
 							Home
 						</Link>
-						<Link to="/destination" className="nav-link mr-lg-5 mr-0">
+						<Link to="/destination" className="nav-link mr-lg-5 mr-0" >
 						    Destination
 						</Link>
 						<Link to="/destination" className="nav-link mr-lg-5 mr-0">
 						   About
 						</Link>
 						{loggedInUser.isSignedIn ? (
-							<Button className="btn btn-warning tg-primary">Sign out</Button>
+							<Button className="btn btn-secondary">Sign out</Button>
 						) : (
-							<Button className="btn btn-warning tg-primary" onClick={handleLoginRoute}>
-								Log In
+							<Button className="btn btn-success" onClick={handleLoginRoute}>
+								Sign In
 							</Button>
 						)}
 

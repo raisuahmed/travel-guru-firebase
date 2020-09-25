@@ -1,28 +1,41 @@
-import React from 'react';
-import GoogleMapReact from 'google-map-react';
-// import { MDBIcon } from 'mdbreact';
+import React, { useState } from "react";
+import { GoogleMap, Marker, withScriptjs, withGoogleMap, InfoWindow } from "react-google-maps";
+import { hotelsInfo } from "../../fakeData/hotelsInfo";
 
+const HotelMap = () => {
+	const [infoBox] = useState(null);
+	return (
+		<GoogleMap defaultZoom={12} defaultCenter={{ lat: 21.4242785, lng: 91.9315097 }}>
+			{hotelsInfo.map((hotel) => (
+				<Marker
+					position={{
+						lat: hotel.cords.lat,
+						lng: hotel.cords.lng,
+					}}
+					onClick={() => hotel}
+				/>
+			))}
+			{infoBox && (
+				<InfoWindow>
+					<div>Hotel details</div>
+				</InfoWindow>
+			)}
+		</GoogleMap>
+	);
+};
+const WrappedMap = withScriptjs(withGoogleMap(HotelMap));
 
-
-const Gmap = (props) => {
-    const marker = props.marker;
-    console.log(marker)
-    return (
-        <div style={{ height: '100vh', width: '100%' }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyByIaqQbqmkciufaLCNv3OcvxeF13t7aXs" }} //AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg
-          defaultCenter={marker}
-          defaultZoom={10}
-        >
-          {/* <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
-          /> */}
-          {/* <MDBIcon className="fa-3x" style={{color:'red'}} icon="map-marker" position={marker} /> */}
-        </GoogleMapReact>
-      </div>
-    );
+const Map = () => {
+	return (
+		<div className="google-map">
+			<WrappedMap
+				googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDsiHsbdv3aRyFeXWFef8Qdm1DTzumnr70`}
+				loadingElement={<div style={{ height: `300px` }} />}
+				containerElement={<div style={{ height: `400px` }} />}
+				mapElement={<div style={{ width: "300px", height: "300px", borderRadius: "13px" }} />}
+			/>
+		</div>
+	);
 };
 
-export default Gmap;
+export default Map;

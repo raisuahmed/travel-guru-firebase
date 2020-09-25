@@ -6,6 +6,8 @@ import Header from "./Components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Booking from "./Components/Booking/Booking";
 import Destination from "./Components/Destination/Destination";
+import Login from "./Components/Login/Login";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext();
 
@@ -21,17 +23,15 @@ function App() {
 						<Home></Home>
 					</Route>
 					<Route path="/user">
-						
+						<Login></Login>
 					</Route>
 					<Route path="/booking/:id">
 						<Booking></Booking>
 					</Route>
-					
+					<PrivateRoute path="/destination">
 						<Destination></Destination>
+					</PrivateRoute>
 					
-					<Route path="*">
-						
-					</Route>
 				</Switch>
 			</Router>
 		</UserContext.Provider>

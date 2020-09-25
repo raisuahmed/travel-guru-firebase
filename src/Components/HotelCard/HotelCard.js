@@ -10,8 +10,8 @@ const HotelCard = (props) => {
 			<div className="info">
 				<h4>{title}</h4>
 				<p>
-					{specification.guest} guest, {specification.rooms} rooms, {specification.beds} beds,{" "}
-					{specification.bathrooms} bathrooms
+					{specification.guest} guest, {specification.rooms} room, {specification.beds} beds,{" "}
+					{specification.bathrooms} bathroom
 				</p>
 				<p>{features[0]}</p>
 				<p>{features[1]}</p>
