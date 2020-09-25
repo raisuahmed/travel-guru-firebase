@@ -19,7 +19,7 @@ const Home = () => {
 					<div className="col-md-3">
 										
 							<button className="btn btn-primary" style={{marginTop:"260px"}} onClick={handleBookingRoute}>
-								 Booking-> <i className="fas fa-arrow-left"></i>
+								 Booking <i className="fas fa-arrow-left"></i>
 							</button>
 						
 					</div>
