@@ -31,14 +31,16 @@ const Header = () => {
 							Home
 						</Link>
 						<Link to="/destination" className="nav-link mr-lg-5 mr-0">
-							Landing Place
+						    Destination
 						</Link>
-
+						<Link to="/destination" className="nav-link mr-lg-5 mr-0">
+						   About
+						</Link>
 						{loggedInUser.isSignedIn ? (
 							<Button className="btn btn-warning tg-primary">Sign out</Button>
 						) : (
 							<Button className="btn btn-warning tg-primary" onClick={handleLoginRoute}>
-								Sign In
+								Log In
 							</Button>
 						)}
 

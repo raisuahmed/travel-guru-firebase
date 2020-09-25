@@ -76,3 +76,85 @@ h1{
 	left: 20px;
 }
 
+.tg-booking-form {
+	background: #ffffff;
+	border-radius: 5px;
+	padding: 25px;
+}
+
+.tg-booking-form .form-control {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 25px;
+	background: #f2f2f2;
+	border-radius: 10px;
+	border: none;
+	height: 70px;
+}
+
+.tg-booking-form .btn.tg-primary {
+	height: 60px;
+	margin-top: 30px;
+}
+
+.tg-hero-images a {
+	display: block;
+	transition: 0.3s;
+	border-radius: 12px;
+}
+
+.tg-hero-images img {
+	box-shadow: 0px 20px 30px rgb(0 0 0 / 40%);
+	border-radius: 10px;
+	transition: 0.5s;
+}
+
+.tg-hero-images a:hover,
+.tg-hero-images a:focus {
+	box-shadow: 0 0 0 4px #04d454;
+}
+
+.tg-hero-images a:hover img,
+.tg-hero-images a:focus img {
+	box-shadow: 0px 20px 50px rgba(58, 57, 13, 0.5);
+}
+
+.tg-destination .section-top h3 {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+}
+
+.section-top h4 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+	color: #2b2b2b;
+}
+
+.hotel-card .info h4 {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 26px;
+	color: #000;
+	margin-bottom: 1em;
+}
+
+.hotel-card .info p:not(.ratings) {
+	font-size: 16px;
+	line-height: 20px;
+	color: #6a6a6a;
+	margin-bottom: 10px;
+}
+
+.hotel-card .info .ratings {
+	margin-bottom: 0;
+}
+
+.hotel-card .info .ratings > * {
+	margin-right: 24px;
+}

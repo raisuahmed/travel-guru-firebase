@@ -4,11 +4,8 @@ import "./App.css";
 import Home from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import Login from "./components/Login/Login";
-// import Booking from "./components/Booking/Booking";
-// import NotFound from "./components/NotFound/NotFound";
-// import Destination from "./components/Destination/Destination";
-// import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Booking from "./Components/Booking/Booking";
+import Destination from "./Components/Destination/Destination";
 
 export const UserContext = createContext();
 
@@ -24,16 +21,16 @@ function App() {
 						<Home></Home>
 					</Route>
 					<Route path="/user">
-						{/* <Login></Login> */}
+						
 					</Route>
 					<Route path="/booking/:id">
-						{/* <Booking></Booking> */}
+						<Booking></Booking>
 					</Route>
-					{/* <PrivateRoute path="/destination"> */}
-						{/* <Destination></Destination> */}
-					{/* </PrivateRoute> */}
+					
+						<Destination></Destination>
+					
 					<Route path="*">
-						{/* <NotFound></NotFound> */}
+						
 					</Route>
 				</Switch>
 			</Router>
