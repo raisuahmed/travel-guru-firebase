@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
-import LoginWithOthers from "../LoginWithOthers/LoginWithOthers";
 import LoginForm from "./LoginForm";
+import LoginWithOthers from "../LoginWithOthers/LoginWithOthers";
 import SignUpForm from "./SignUpForm";
 import { useHistory, useLocation } from "react-router-dom";
 import * as firebase from "firebase/app";
+
 import "firebase/auth";
 import firebaseConfig from "../UserAuth/firebaseConfig";
 import { UserContext } from "../../App";
