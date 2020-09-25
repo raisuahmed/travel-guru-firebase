@@ -1,7 +1,7 @@
 import React, { createContext, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-// import Home from "./components/Home/Home";
+import Home from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import Login from "./components/Login/Login";
@@ -21,7 +21,7 @@ function App() {
 				<Header></Header>
 				<Switch>
 					<Route exact path="/">
-						{/* <Home></Home> */}
+						<Home></Home>
 					</Route>
 					<Route path="/user">
 						{/* <Login></Login> */}
