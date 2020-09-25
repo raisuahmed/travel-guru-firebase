@@ -1,8 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import FakeData from "../../FakeData";
-// import TravelCard from "../TravelCard/TravelCard";
-// import "./Home.css";
+import FakeData from "../../fakeData";
+import TravelCard from "../TravelCard/TravelCard";
+ import "./Home.css";
 
 const Home = () => {
 	const history = useHistory();
@@ -13,19 +13,19 @@ const Home = () => {
 	};
 
 	return (
-		<main className="tg-hero d-flex align-items-center">
+		<main className="tg-hero d-flex align-items-center  ">
 			<div className="container">
 				<div className="row">
-					<div className="col-md-5">
-						<div className="tg-hero-cta mb-md-0 mb-5">
-							<h1>Cox's bazar</h1>
+					<div className="col-md-3">
+						<div className="card mb-md-0 mt-4">
+							<h1>Cox's Bazar</h1>
 							<p>
-							Cox's Bazar is famous for its long natural sandy sea beach. I have been to Cox's Bazar in all seasons and many times over the last 20 years or so...
-							</p>
-							<button className="btn tg-primary" onClick={handleBookingRoute}>
-								Start Booking <i className="fas fa-arrow-right"></i>
+							<strong>Cox's Bazar </strong>(Bengali: কক্সবাজার, pronounced [kɔksbadʒaɾ]) is a city, fishing port, tourism centre and district headquarters in southeastern Bangladesh. It is famous mostly for its long natural sandy beach.....				</p>
+							</div>
+							<button className="btn tg-primary p-5" onClick={handleBookingRoute}>
+								Start Booking <i className="fas fa-arrow-left"></i>
 							</button>
-						</div>
+						
 					</div>
 					<div className="col-md-7">
 						<div className="tg-hero-images">

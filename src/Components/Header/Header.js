@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-// import "./Header.css";
+import "./Header.css";
 import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
 import logo from "../../Icon/Logo.png";
 import { Link, useHistory } from "react-router-dom";
@@ -14,11 +14,11 @@ const Header = () => {
 	// const [signOutUser, setSignOutUser] = useContext(UserContext);
 
 	return (
-		<Navbar bg="" expand="md">
+		<Navbar bg="dark" expand="md">
 			<div className="container-lg">
 				<Link to="/" className="navbar-brand mr-md-5 mr-0">
 					<div className="logo">
-						<img src={logo} style={{ maxWidth: "120px" }} alt="logo dark" />
+						<img src={logo} style={{ maxWidth: "120px", color:"white" }} alt="logo dark" />
 					</div>
 				</Link>
 				<div className="tg-search">
